@@ -74,7 +74,7 @@ curl --location --request GET 'http://127.0.0.1:8022/api/order/1' \
 
 ### 3. Sipariş Ekleme
 
-> Not: Ürünlerden stok bilgisini günceller.
+> Not: Ürünlerden stok bilgisini ekler.
 
 | Tip | Değer |
 | --- | --- |
@@ -93,7 +93,7 @@ curl --location --request POST 'http://127.0.0.1:8022/api/order' \
 
 ### 4. Sipariş Silme
 
-> Not: Ürünlerden stok bilgisini günceller.
+> Not: Ürünlerden stok bilgisini siler.
 
 | Tip | Değer |
 | --- | --- |
@@ -123,4 +123,8 @@ curl --location --request PUT 'http://127.0.0.1:8022/order/1' \
 --data-urlencode 'quantity=1' \
 --data-urlencode 'address=werewr'
 ```
+
+### 6. Postman Restful API Collection
+
+> Not: PathInternet.postman_collection.json
 
