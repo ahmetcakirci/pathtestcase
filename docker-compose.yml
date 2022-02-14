@@ -1,0 +1,32 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    container_name: app
+    volumes:
+      -  ./:/home/app
+    ports:
+      - "8022:8082"
+  mysql:
+    container_name: mysql
+    image: mysql:8.0
+    volumes:
+      -  db_data:/var/lib/mysql
+    restart: always
+    ports:
+      -  "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: pathdb
+      MYSQL_USER: pathuser
+      MYSQL_PASSWORD: pathpass123
+
+volumes:
+
+###> doctrine/doctrine-bundle ###
+  db-data:
+###< doctrine/doctrine-bundle ###
+  db_data: {}
+
+networks:
+  net:
