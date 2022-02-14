@@ -53,15 +53,12 @@ class AuthController extends AbstractController
         }
 
 
-
         $user = new User($input['username']);
-        $user->setPassword($input['password']);
+        $user->setPassword($encoder->encodePassword($user, $input['password']));
         $user->setEmail($input['email']);
-        $user->setUsername($input['username']);
-
+        $user->setUserName($input['username']);
 
         $entityManager = $this->getDoctrine()->getManager();
-
         $entityManager->persist($user);
         $entityManager->flush();
 
@@ -74,8 +71,9 @@ class AuthController extends AbstractController
      * @Route("/api/login_check", name="user_token", methods={"POST"})
      *
      */
-    public function getTokenUser(UserInterface $user, JWTTokenManagerInterface $JWTManager)
+    public function getTokenUser(UserInterface $user, JWTTokenManagerInterface $JWTManager):Response
     {
+var_dump($user);exit;
         return new JsonResponse(['token' => $JWTManager->create($user)]);
     }
 

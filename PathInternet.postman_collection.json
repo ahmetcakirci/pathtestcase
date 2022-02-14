@@ -190,12 +190,12 @@
 					"formdata": [
 						{
 							"key": "username",
-							"value": "ahmetcakirci",
+							"value": "alicakircis",
 							"type": "text"
 						},
 						{
 							"key": "password",
-							"value": "12345",
+							"value": "12345345",
 							"type": "text"
 						},
 						{
@@ -217,6 +217,38 @@
 					"port": "8022",
 					"path": [
 						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8022/api/login_check",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"ahmetcakirci\",\n    \"password\":\"12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8022/api/login_check",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8022",
+					"path": [
+						"api",
+						"login_check"
 					]
 				}
 			},
