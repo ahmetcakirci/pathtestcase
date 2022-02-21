@@ -18,6 +18,7 @@ WORKDIR /home/app
 
 COPY . .
 
+RUN chmod -R 777 /home/app/config/jwt
 RUN chmod -R 777 /home/app/var/log
 RUN chmod -R 777 /home/app/var/cache
 

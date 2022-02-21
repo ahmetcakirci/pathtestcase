@@ -59,8 +59,9 @@ sudo docker exec -it app php bin/console doctrine:migrations:migrate
 
 ##### Örnek Curl İsteği
 ```
-curl --location --request GET 'http://127.0.0.1:8022/api/order/lists' \
---header 'Content-Type: application/json'
+curl --location --request GET 'http://127.0.0.1:8022/api/order/list' \
+--header 'Accept: application/json' \
+--header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NDU0ODcwMzcsImV4cCI6MTY0NTQ5MDYzNywicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoiYWxpY2FraXJjaSJ9.cg5WOmJe_V3Lu3mm6Lqa_Kvr1RCKLvpRweCyPLHT-YP87YiWVtTL9lnZ7crQWphnBVq-3vX5wa_BfHQJ9wyHNYFG9gUZhOZY2f_CvlnJ1pF9tq8lYfPKkuiDUu4qHRaKR3Vl54Gg0CJzAUT6hlQNFsHXjxDRP5d9TRVLZ6xRqJZE0FFWJtudUgnFyVEJW9BG8ThQnkivnKLP_kNAPM-A8XqEzrveo4Ivmps75bG13yQfMfYEI5TY0h3vTG8WPo3xfILB44ATVkcoo8l--rCe-Yq3EOFxsa2GDs5K91ijmxk2Jmimiv2fHnQmHIl9jTOeSBD1sLHDc4x6uIdWHZ0KYw'
 ```
 
 ### 2. Sipariş Görüntüleme
@@ -72,8 +73,9 @@ curl --location --request GET 'http://127.0.0.1:8022/api/order/lists' \
 
 ##### Örnek Curl İsteği
 ```
-curl --location --request GET 'http://127.0.0.1:8022/api/order/1' \
---header 'Content-Type: application/json'
+curl --location --request GET 'http://127.0.0.1:8022/api/order/2' \
+--header 'Accept: application/json' \
+--header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NDU0ODcwMzcsImV4cCI6MTY0NTQ5MDYzNywicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoiYWxpY2FraXJjaSJ9.cg5WOmJe_V3Lu3mm6Lqa_Kvr1RCKLvpRweCyPLHT-YP87YiWVtTL9lnZ7crQWphnBVq-3vX5wa_BfHQJ9wyHNYFG9gUZhOZY2f_CvlnJ1pF9tq8lYfPKkuiDUu4qHRaKR3Vl54Gg0CJzAUT6hlQNFsHXjxDRP5d9TRVLZ6xRqJZE0FFWJtudUgnFyVEJW9BG8ThQnkivnKLP_kNAPM-A8XqEzrveo4Ivmps75bG13yQfMfYEI5TY0h3vTG8WPo3xfILB44ATVkcoo8l--rCe-Yq3EOFxsa2GDs5K91ijmxk2Jmimiv2fHnQmHIl9jTOeSBD1sLHDc4x6uIdWHZ0KYw'
 ```
 
 ### 3. Sipariş Ekleme
@@ -88,7 +90,8 @@ curl --location --request GET 'http://127.0.0.1:8022/api/order/1' \
 ##### Örnek Curl İsteği
 ```
 curl --location --request POST 'http://127.0.0.1:8022/api/order' \
---header 'Authorization: Bearer 2343242' \
+--header 'Accept: application/json' \
+--header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NDU0ODcwMzcsImV4cCI6MTY0NTQ5MDYzNywicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoiYWxpY2FraXJjaSJ9.cg5WOmJe_V3Lu3mm6Lqa_Kvr1RCKLvpRweCyPLHT-YP87YiWVtTL9lnZ7crQWphnBVq-3vX5wa_BfHQJ9wyHNYFG9gUZhOZY2f_CvlnJ1pF9tq8lYfPKkuiDUu4qHRaKR3Vl54Gg0CJzAUT6hlQNFsHXjxDRP5d9TRVLZ6xRqJZE0FFWJtudUgnFyVEJW9BG8ThQnkivnKLP_kNAPM-A8XqEzrveo4Ivmps75bG13yQfMfYEI5TY0h3vTG8WPo3xfILB44ATVkcoo8l--rCe-Yq3EOFxsa2GDs5K91ijmxk2Jmimiv2fHnQmHIl9jTOeSBD1sLHDc4x6uIdWHZ0KYw' \
 --form 'order_code="12345"' \
 --form 'product_id="345345"' \
 --form 'quantity="2"' \
@@ -107,7 +110,8 @@ curl --location --request POST 'http://127.0.0.1:8022/api/order' \
 ##### Örnek Curl İsteği
 ```
 curl --location --request DELETE 'http://127.0.0.1:8022/api/order/1' \
---header 'Content-Type: application/json'
+--header 'Accept: application/json' \
+--header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NDU0ODcwMzcsImV4cCI6MTY0NTQ5MDYzNywicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoiYWxpY2FraXJjaSJ9.cg5WOmJe_V3Lu3mm6Lqa_Kvr1RCKLvpRweCyPLHT-YP87YiWVtTL9lnZ7crQWphnBVq-3vX5wa_BfHQJ9wyHNYFG9gUZhOZY2f_CvlnJ1pF9tq8lYfPKkuiDUu4qHRaKR3Vl54Gg0CJzAUT6hlQNFsHXjxDRP5d9TRVLZ6xRqJZE0FFWJtudUgnFyVEJW9BG8ThQnkivnKLP_kNAPM-A8XqEzrveo4Ivmps75bG13yQfMfYEI5TY0h3vTG8WPo3xfILB44ATVkcoo8l--rCe-Yq3EOFxsa2GDs5K91ijmxk2Jmimiv2fHnQmHIl9jTOeSBD1sLHDc4x6uIdWHZ0KYw'
 ```
 
 
@@ -122,13 +126,38 @@ curl --location --request DELETE 'http://127.0.0.1:8022/api/order/1' \
 
 ##### Örnek Curl İsteği
 ```
-curl --location --request PUT 'http://127.0.0.1:8022/order/1' \
+curl --location --request PUT 'http://127.0.0.1:8022/api/order/1' \
+--header 'Accept: application/json' \
+--header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NDU0ODcwMzcsImV4cCI6MTY0NTQ5MDYzNywicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoiYWxpY2FraXJjaSJ9.cg5WOmJe_V3Lu3mm6Lqa_Kvr1RCKLvpRweCyPLHT-YP87YiWVtTL9lnZ7crQWphnBVq-3vX5wa_BfHQJ9wyHNYFG9gUZhOZY2f_CvlnJ1pF9tq8lYfPKkuiDUu4qHRaKR3Vl54Gg0CJzAUT6hlQNFsHXjxDRP5d9TRVLZ6xRqJZE0FFWJtudUgnFyVEJW9BG8ThQnkivnKLP_kNAPM-A8XqEzrveo4Ivmps75bG13yQfMfYEI5TY0h3vTG8WPo3xfILB44ATVkcoo8l--rCe-Yq3EOFxsa2GDs5K91ijmxk2Jmimiv2fHnQmHIl9jTOeSBD1sLHDc4x6uIdWHZ0KYw' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --data-urlencode 'quantity=1' \
 --data-urlencode 'address=werewr'
 ```
-
-### 6. Postman Restful API Collection
+### 6. Register
+| Tip | Değer |
+| --- | --- |
+| Method | POST |
+| Route | /register |
+```
+curl --location --request POST 'http://127.0.0.1:8022/register' \
+--form 'username="alicakirci"' \
+--form 'password="12345345"' \
+--form 'email="deneme@gmail.com"'
+```
+### 7. Login
+| Tip | Değer |
+| --- | --- |
+| Method | POST |
+| Route | /api/login_check |
+```
+curl --location --request POST 'http://127.0.0.1:8022/api/login_check' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "username":"alicakirci",
+    "password":"12345345"
+}'
+```
+### 8. Postman Restful API Collection
 
 > Not: PathInternet.postman_collection.json
 

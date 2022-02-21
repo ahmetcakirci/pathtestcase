@@ -7,12 +7,27 @@
 	"item": [
 		{
 			"name": "http://127.0.0.1:8022/api/order",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
 			"request": {
 				"method": "POST",
 				"header": [
 					{
 						"key": "Authorization",
 						"value": "Bearer 2343242",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NDU0ODcwMzcsImV4cCI6MTY0NTQ5MDYzNywicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoiYWxpY2FraXJjaSJ9.cg5WOmJe_V3Lu3mm6Lqa_Kvr1RCKLvpRweCyPLHT-YP87YiWVtTL9lnZ7crQWphnBVq-3vX5wa_BfHQJ9wyHNYFG9gUZhOZY2f_CvlnJ1pF9tq8lYfPKkuiDUu4qHRaKR3Vl54Gg0CJzAUT6hlQNFsHXjxDRP5d9TRVLZ6xRqJZE0FFWJtudUgnFyVEJW9BG8ThQnkivnKLP_kNAPM-A8XqEzrveo4Ivmps75bG13yQfMfYEI5TY0h3vTG8WPo3xfILB44ATVkcoo8l--rCe-Yq3EOFxsa2GDs5K91ijmxk2Jmimiv2fHnQmHIl9jTOeSBD1sLHDc4x6uIdWHZ0KYw",
 						"type": "text"
 					}
 				],
@@ -61,9 +76,25 @@
 		},
 		{
 			"name": "http://127.0.0.1:8022/api/order/1",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
 			"request": {
 				"method": "PUT",
-				"header": [],
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NDU0ODcwMzcsImV4cCI6MTY0NTQ5MDYzNywicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoiYWxpY2FraXJjaSJ9.cg5WOmJe_V3Lu3mm6Lqa_Kvr1RCKLvpRweCyPLHT-YP87YiWVtTL9lnZ7crQWphnBVq-3vX5wa_BfHQJ9wyHNYFG9gUZhOZY2f_CvlnJ1pF9tq8lYfPKkuiDUu4qHRaKR3Vl54Gg0CJzAUT6hlQNFsHXjxDRP5d9TRVLZ6xRqJZE0FFWJtudUgnFyVEJW9BG8ThQnkivnKLP_kNAPM-A8XqEzrveo4Ivmps75bG13yQfMfYEI5TY0h3vTG8WPo3xfILB44ATVkcoo8l--rCe-Yq3EOFxsa2GDs5K91ijmxk2Jmimiv2fHnQmHIl9jTOeSBD1sLHDc4x6uIdWHZ0KYw",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "urlencoded",
 					"urlencoded": [
@@ -100,9 +131,25 @@
 		},
 		{
 			"name": "http://127.0.0.1:8022/api/order/1",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
 			"request": {
 				"method": "DELETE",
-				"header": [],
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NDU0ODcwMzcsImV4cCI6MTY0NTQ5MDYzNywicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoiYWxpY2FraXJjaSJ9.cg5WOmJe_V3Lu3mm6Lqa_Kvr1RCKLvpRweCyPLHT-YP87YiWVtTL9lnZ7crQWphnBVq-3vX5wa_BfHQJ9wyHNYFG9gUZhOZY2f_CvlnJ1pF9tq8lYfPKkuiDUu4qHRaKR3Vl54Gg0CJzAUT6hlQNFsHXjxDRP5d9TRVLZ6xRqJZE0FFWJtudUgnFyVEJW9BG8ThQnkivnKLP_kNAPM-A8XqEzrveo4Ivmps75bG13yQfMfYEI5TY0h3vTG8WPo3xfILB44ATVkcoo8l--rCe-Yq3EOFxsa2GDs5K91ijmxk2Jmimiv2fHnQmHIl9jTOeSBD1sLHDc4x6uIdWHZ0KYw",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "http://127.0.0.1:8022/api/order/1",
 					"protocol": "http",
@@ -124,9 +171,25 @@
 		},
 		{
 			"name": "http://127.0.0.1:8022/api/order/2",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NDU0ODcwMzcsImV4cCI6MTY0NTQ5MDYzNywicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoiYWxpY2FraXJjaSJ9.cg5WOmJe_V3Lu3mm6Lqa_Kvr1RCKLvpRweCyPLHT-YP87YiWVtTL9lnZ7crQWphnBVq-3vX5wa_BfHQJ9wyHNYFG9gUZhOZY2f_CvlnJ1pF9tq8lYfPKkuiDUu4qHRaKR3Vl54Gg0CJzAUT6hlQNFsHXjxDRP5d9TRVLZ6xRqJZE0FFWJtudUgnFyVEJW9BG8ThQnkivnKLP_kNAPM-A8XqEzrveo4Ivmps75bG13yQfMfYEI5TY0h3vTG8WPo3xfILB44ATVkcoo8l--rCe-Yq3EOFxsa2GDs5K91ijmxk2Jmimiv2fHnQmHIl9jTOeSBD1sLHDc4x6uIdWHZ0KYw",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "http://127.0.0.1:8022/api/order/2",
 					"protocol": "http",
@@ -148,11 +211,27 @@
 		},
 		{
 			"name": "http://127.0.0.1:8022/api/order/lists",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NDU0ODcwMzcsImV4cCI6MTY0NTQ5MDYzNywicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoiYWxpY2FraXJjaSJ9.cg5WOmJe_V3Lu3mm6Lqa_Kvr1RCKLvpRweCyPLHT-YP87YiWVtTL9lnZ7crQWphnBVq-3vX5wa_BfHQJ9wyHNYFG9gUZhOZY2f_CvlnJ1pF9tq8lYfPKkuiDUu4qHRaKR3Vl54Gg0CJzAUT6hlQNFsHXjxDRP5d9TRVLZ6xRqJZE0FFWJtudUgnFyVEJW9BG8ThQnkivnKLP_kNAPM-A8XqEzrveo4Ivmps75bG13yQfMfYEI5TY0h3vTG8WPo3xfILB44ATVkcoo8l--rCe-Yq3EOFxsa2GDs5K91ijmxk2Jmimiv2fHnQmHIl9jTOeSBD1sLHDc4x6uIdWHZ0KYw",
+						"type": "text"
+					}
+				],
 				"url": {
-					"raw": "http://127.0.0.1:8022/api/order/lists",
+					"raw": "http://127.0.0.1:8022/api/order/list",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -164,7 +243,7 @@
 					"path": [
 						"api",
 						"order",
-						"lists"
+						"list"
 					]
 				}
 			},
@@ -190,7 +269,7 @@
 					"formdata": [
 						{
 							"key": "username",
-							"value": "alicakircis",
+							"value": "alicakirci",
 							"type": "text"
 						},
 						{
@@ -200,7 +279,7 @@
 						},
 						{
 							"key": "email",
-							"value": "ahmetcakirci@gmail.com",
+							"value": "ahmetcakirci1@gmail.com",
 							"type": "text"
 						}
 					]
@@ -229,7 +308,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"username\":\"ahmetcakirci\",\n    \"password\":\"12345\"\n}",
+					"raw": "{\n    \"username\":\"alicakirci\",\n    \"password\":\"12345345\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
