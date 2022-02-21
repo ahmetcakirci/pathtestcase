@@ -15,7 +15,7 @@ Bir sipariş RESTful Api servisidir.
 Repoyu pathtestcase isimli klasöre klonluyoruz.
 
 ```
-git clone https://github.com/ahmetcakirci/pathtestcase.git PathTestCase
+git clone https://github.com/ahmetcakirci/pathtestcase.git
 ```
 
 ### 2. Docker
@@ -24,9 +24,12 @@ Eğer docker yoksa; https://docs.docker.com/ adresinden docker için gerekli kur
 
 ```
 cd pathtestcase/
-make init sonra make up
+mkdir var
+mkdir var/cache
+mkdir var/log
+sudo make init up
 veya
-docker-compose up -d
+sudo docker-compose up -d
 ```
 > Docker containerlarımızı hazır hale getiriyoruz.
 > - Symfony sanal web sunucumuz 8022 üzerinden yayın yapıyor.
@@ -37,7 +40,6 @@ docker-compose up -d
 Docker containerlarımız çalışınca artık symfony için veritabanını hazır hale getiriyoruz.
 
 ```
-sudo docker exec -it app php bin/console make:migration
 sudo docker exec -it app php bin/console doctrine:migrations:migrate
 ```
 
