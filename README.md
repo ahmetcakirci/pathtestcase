@@ -18,8 +18,9 @@ Repoyu pathtestcase isimli klasöre klonluyoruz.
 git clone https://github.com/ahmetcakirci/pathtestcase.git
 ```
 
-### 2. Docker
+### 2. Composer ve Docker
 
+Eğer composer paket yöneticiniz local bilgisayarınızda yüklü değilse https://getcomposer.org/ adresinden gerekli talimatlara uyarak kurabilirsiniz.
 Eğer docker yoksa; https://docs.docker.com/ adresinden docker için gerekli kurulumları yapabilirsiniz.
 
 ```
@@ -27,6 +28,7 @@ cd pathtestcase/
 mkdir var
 mkdir var/cache
 mkdir var/log
+composer install
 sudo make init up
 veya
 sudo docker-compose up -d
